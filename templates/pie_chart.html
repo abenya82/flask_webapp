@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="mt-4 p-5 bg-primary text-white rounded">
+    <h1> Pie Chart Page </h1>
+
+
+
+</div>
+
+<body>
+<!-- 
+{% for x in options: %}
+<p>
+    {{ x }}
+</p>
+{% endfor %}
+
+-->
+
+    <img src="{{ pie_chart_filename }}" alt="Pie Chart!">
+
+
+
+<form action ="/one_column_landing/" method="POST">
+
+    <label for="columns"><span style="color:purple;font-family:'Helvetica Neue'">Select Column:</span></label>
+
+        <select name="pie_chart_columns" id="pie_columns">
+            <option value="" disabled selected hidden> </option>
+            <option value="Order Priority">Order Priority</option>
+            <option value="Ship Mode">Ship Mode</option>
+            <option value="Category">Category</option>
+            <option value="Country">Country</option>
+            <option value="order_date_month">Order Month</option>
+            <option value="Year">Order Year</option>
+        </select> 
+
+    <label for="year"><span style="color:purple;font-family:'Helvetica Neue'">Select Year:</span></label>
+
+        <select name="year" id="year">
+            <option value="" disabled selected hidden> </option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+        </select> 
+
+
+    <input type="submit" value="Submit" />
+    
+</form>
+
+</body>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="mt-4 p-5 bg-primary text-white rounded">
+    <h1> Product Chart Page</h1>
+
+
+</div>
+
+
+
+<h1> <span style="color:purple;font-family:'Helvetica Neue'"> {{ product }}</span></h1>
+
+
+
+<img src="{{ top_country_counts_chart_filename }}">
+
+
+
+
+
+
+
+
+
+
+<form action ="/product_landing/" method="POST">
+
+    <label for="columns">Select from entire product list:</label>
+
+        <select name="product" id="product">
+            {% for x in product_list_whole %}
+            <option value="{{ x }}">{{ x }}</option>
+            {% endfor %}
+            
+        </select> 
+
+    <input type="submit" value="Submit" />
+</form>
+
+{% endblock %}

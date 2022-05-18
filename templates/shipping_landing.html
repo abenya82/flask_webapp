@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="mt-4 p-5 bg-primary text-white rounded">
+    <h1> Shipping Landing Page</h1>
+
+
+</div>
+
+<form action ="#" method="POST">
+
+    <label for="columns">Select Column:</label>
+
+        <select name="column_summed" id="column_summed">
+            <option value="Sales">Sales</option>
+            <option value="Profit">Profit</option>
+            
+        </select> 
+
+    <label for="level">Select Level:</label>
+
+        <select name="locations" id="locations">
+            <option value="Category">Category</option>
+            <option value="Region">Region</option>
+            <option value="Market">Market</option>
+            <option value="Market2">Market2</option>
+        </select> 
+
+
+    <input type="submit" value="Submit" />
+</form>
+
+<blink>OR:</blink>
+
+
+<form action ="/shipping/freq/" method="POST">
+
+    <label for="columns">Select Column:</label>
+
+        <select name="column1" id="column1">
+            <option value="Ship Mode">Ship Mode</option>
+            <option value="Order Priority">Order Priority</option>
+            <option value="Category">Category</option>
+        </select> 
+
+    <label for="level">Select Level:</label>
+
+        <select name="column2" id="column2">
+            <option value="Category">Category</option>
+            <option value="Ship Mode">Ship Mode</option>
+            <option value="Region">Region</option>
+            <option value="Market">Market</option>
+            <option value="Market2">Market2</option>
+        </select> 
+
+
+    <input type="submit" value="Submit" />
+</form>
+
+
+{% endblock %}

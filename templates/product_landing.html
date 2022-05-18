@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="mt-4 p-5 bg-primary text-white rounded">
+    <h1> Product Landing </h1>
+</div>
+<h2>Top Products!</h2>
+
+
+
+
+
+<img src="{{ top_chart_filename }}">
+<br>
+<br><br>
+<h2>Choose Product to Investigate</h2>
+
+    <form action ="#" method="POST">
+
+        <label for="columns">Select from top 10:</label>
+    
+            <select name="product" id="product">
+                {% for x in product_list_top10 %}
+                <option value="{{ x }}">{{ x }}</option>
+                {% endfor %}
+                
+            </select> 
+    
+        
+    
+    
+        <input type="submit" value="Submit" />
+    </form>
+
+    
+    <form action ="#" method="POST">
+
+        <label for="columns">Select from entire product list:</label>
+    
+            <select name="product" id="product">
+                {% for x in product_list_whole %}
+                <option value="{{ x }}">{{ x }}</option>
+                {% endfor %}
+                
+            </select> 
+    
+        
+    
+    
+        <input type="submit" value="Submit" />
+    </form>
+
+    
+
+{% endblock %}

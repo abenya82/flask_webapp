@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="mt-4 p-5 bg-primary text-white rounded">
+    <h1> Time Landing </h1>
+
+
+</div>
+
+<!--
+
+    choose month,week,year  (x axis)
+
+    choose category, sub-category, market2, 
+
+
+-->
+From All Years:
+<form action ="/time_chart/" method="POST">
+
+    <label for="columns">Select Temporal Breakdown:</label>
+
+        <select name="time_selection" id="time_selection">
+            <option value="order_date_day">Day</option>
+            <option value="weeknum">Week</option>
+            <option value="order_date_month">Month</option>
+            <option value="Year">Year</option>
+            
+        </select> 
+
+    <label for="column">Select Column:</label>
+
+        <select name="column" id="column">
+            
+            <option value="Order Priority">Order Priority</option>
+        </select> 
+
+
+    <input type="submit" value="Submit" />
+</form>
+
+
+
+{% endblock %}

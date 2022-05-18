@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="mt-8 p-5 bg-primary text-white rounded">
+    <h1> One Column Landing Page</h1>
+
+
+</div>
+
+<form action ="#" method="POST">
+
+    <label for="columns">Select Column:</label>
+
+        <select name="pie_chart_columns" id="pie_columns">
+            <option value="Order Priority">Order Priority</option>
+            <option value="Ship Mode">Ship Mode</option>
+            <option value="Category">Category</option>
+            <option value="Sub-Category">Sub-Category</option>
+            <option value="Country">Country</option>
+            <option value="order_date_month">Order Month</option>
+            <option value="Year">Order Year</option>
+        </select> 
+
+    <label for="year">Select Year:</label>
+
+        <select name="year" id="year">
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+        </select> 
+
+
+    <input type="submit" value="Submit" />
+</form>
+
+
+
+
+{% endblock %}
